@@ -1,0 +1,21 @@
+{
+  "name": "devio-editorial-assistant",
+  "version": "0.0.1",
+  "description": "Developers.IO編集者を少し助けてくれるChrome拡張です。",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "zip": "zip -r devio-editorial-assistant.zip . -x *.git* -x docs/**/* -x *.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoito/devio-editorial-assistant.git"
+  },
+  "author": "@shoito",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shoito/devio-editorial-assistant/issues"
+  },
+  "homepage": "https://github.com/shoito/devio-editorial-assistant#readme"
+}
