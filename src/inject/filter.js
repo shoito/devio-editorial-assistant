@@ -2,6 +2,11 @@
  * 記事編集ページのカテゴリ、特集カテゴリのフォームにインクリメンタルサーチ機能を加える
  */
 (() => {
+  // ブロックエディタ利用時は対象外。ブロックエディタが標準で同機能を提供する。
+  if (document.querySelector("body.block-editor-page")) {
+    return
+  }
+
   const appendFilter = (taxonomyId, listId) => {
     const input = document.createElement("input")
     input.setAttribute("type", "text")
