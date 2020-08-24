@@ -1,5 +1,5 @@
 /**
- * 記事編集ページのカテゴリ、特集カテゴリのフォームにインクリメンタルサーチ機能を加える
+ * 旧エディタの記事編集ページのカテゴリ、特集カテゴリのフォームにインクリメンタルサーチ機能を加える
  */
 (() => {
   // ブロックエディタ利用時は対象外。ブロックエディタが標準で同機能を提供する。
@@ -14,7 +14,9 @@
     input.addEventListener("input", (event) => filterItem(listId, event.target.value))
 
     const taxonomyDiv = document.getElementById(taxonomyId)
-    taxonomyDiv.insertBefore(input, taxonomyDiv.firstChild)
+    if (taxonomyDiv) {
+      taxonomyDiv.insertBefore(input, taxonomyDiv.firstChild)
+    }
   }
 
   const filterItem = (listId, keyword) => {

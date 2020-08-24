@@ -1,5 +1,5 @@
 /**
- * 記事編集ページで禁止されているMarkdownのコードブロック利用を検知してエラーメッセージを表示する
+ * 旧エディタの記事編集ページで禁止されているMarkdownのコードブロック利用を検知してエラーメッセージを表示する
  */
 (() => {
   // ブロックエディタ利用時は対象外。ブロックエディタでのMarkdownコードブロックは禁止しない。
@@ -8,8 +8,8 @@
   }
 
   const notice = document.createElement("div")
-  notice.classList.add("message", "error", "hidden")
-  notice.innerHTML = "<p>禁止されているMarkdownのコードブロック(```)が使われています。<strong>[言語タイプ]ソースコード[/言語タイプ]</strong>記法をご利用ください。</p>"
+  notice.classList.add("notice", "notice-warning", "hidden")
+  notice.innerHTML = "<p>旧エディタで禁止されているMarkdownのコードブロック(```)が使われています。<strong>[言語タイプ]ソースコード[/言語タイプ]</strong>記法をご利用ください。</p>"
 
   const post = document.getElementById("post")
   post.parentElement.insertBefore(notice, post)
