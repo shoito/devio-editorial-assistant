@@ -2,6 +2,11 @@
  * 記事編集ページで禁止されているMarkdownのコードブロック利用を検知してエラーメッセージを表示する
  */
 (() => {
+  // ブロックエディタ利用時は対象外。ブロックエディタでのMarkdownコードブロックは禁止しない。
+  if (document.querySelector("body.block-editor-page")) {
+    return
+  }
+
   const notice = document.createElement("div")
   notice.classList.add("message", "error", "hidden")
   notice.innerHTML = "<p>禁止されているMarkdownのコードブロック(```)が使われています。<strong>[言語タイプ]ソースコード[/言語タイプ]</strong>記法をご利用ください。</p>"
