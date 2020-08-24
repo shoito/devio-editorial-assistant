@@ -1,3 +1,6 @@
+/**
+ * 記事編集ページのカテゴリ、特集カテゴリのフォームにインクリメンタルサーチ機能を加える
+ */
 (() => {
   const appendFilter = (taxonomyId, listId) => {
     const input = document.createElement("input")
