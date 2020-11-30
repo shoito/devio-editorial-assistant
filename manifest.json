@@ -1,7 +1,7 @@
 {
   "name": "Developers.IO編集アシスタント",
   "short_name": "DevIO編集アシスト",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "manifest_version": 2,
   "description": "Developers.IO編集者を少し助けてくれるChrome拡張です。",
   "icons": {
@@ -26,6 +26,15 @@
       ],
       "js": [
         "src/inject/check-syntax.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://dev.classmethod.jp/wp-admin/post.php*",
+        "https://dev.classmethod.jp/wp-admin/post-new.php*"
+      ],
+      "js": [
+        "src/inject/show-settings.js"
       ]
     }
   ]
