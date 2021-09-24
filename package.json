@@ -1,6 +1,6 @@
 {
   "name": "devio-editorial-assistant",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Developers.IO編集者を少し助けてくれるChrome拡張です。",
   "directories": {
     "doc": "docs"
